@@ -1,0 +1,9 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\TcAdsWebService01.Form1.resources
+obj\Debug\TcAdsWebService01.Properties.Resources.resources
+obj\Debug\TcAdsWebService01.csproj.GenerateResource.Cache
+bin\Debug\TcAdsWebService01.exe.config
+bin\Debug\TcAdsWebService01.exe
+bin\Debug\TcAdsWebService01.pdb
+obj\Debug\TcAdsWebService01.exe
+obj\Debug\TcAdsWebService01.pdb

@@ -1,0 +1,14 @@
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\bin\Debug\TcAdsWebService01.exe.config
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\bin\Debug\TcAdsWebService01.exe
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\bin\Debug\TcAdsWebService01.pdb
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\obj\Debug\TcAdsWebService01.csprojAssemblyReference.cache
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\obj\Debug\TcAdsWebService01.Form1.resources
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\obj\Debug\TcAdsWebService01.Properties.Resources.resources
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\obj\Debug\TcAdsWebService01.csproj.GenerateResource.cache
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\obj\Debug\TcAdsWebService01.csproj.CoreCompileInputs.cache
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\obj\Debug\TcAdsWebService01.exe
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\obj\Debug\TcAdsWebService01.pdb
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\bin\Debug\TcAdsWebService01.exe.manifest
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\bin\Debug\TcAdsWebService01.application
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\obj\Debug\TcAdsWebService01.exe.manifest
+C:\1.praca\1.praca\Programy VDS\VDS_ADS_Service\WebServiceSampleCS\TcAdsWebService01\TcAdsWebService01\obj\Debug\TcAdsWebService01.application
