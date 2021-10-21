@@ -1,19 +1,21 @@
 # C# ADS Web Service
 
-<p align="justify">Program stworzony do obsługi wewnętrznych wymuszeń serwisowych sterownika programowalnego. Wykorzystywany jest do tego ADS Web Service. Z poziomu programu nadpisujemy wewnętrzne adresy w pamięci sterownika.</a>
-<br display="block" clear="both">
+<p align="justify">Program stworzony do obsługi wewnętrznych wymuszeń serwisowych sterownika programowalnego. Wykorzystywany jest do tego ADS Web Service. Z poziomu programu nadpisujemy wewnętrzne adresy w pamięci sterownika. Proste narzędzie stworzone aby w łatwy sposób rozwiązać problem.</a>
 <br>
+<hr>
 
-<img align="left" src="https://user-images.githubusercontent.com/92121311/138095541-77ab114d-abe9-4e2f-b073-9235a32b2ebf.PNG" alt="DI">
-<img align="right" src="https://user-images.githubusercontent.com/92121311/138095560-de72eb46-e5b6-4f23-bf92-716b67aab2ec.PNG" alt="DO">
+<img align="left" src="https://user-images.githubusercontent.com/92121311/138095541-77ab114d-abe9-4e2f-b073-9235a32b2ebf.PNG" alt="DI" width="370" height="305" >
+<img align="right" src="https://user-images.githubusercontent.com/92121311/138095560-de72eb46-e5b6-4f23-bf92-716b67aab2ec.PNG" alt="DO" width="370" height="305" >
 <br display="block" clear="both">
 <hr>
-<img align="left" src="https://user-images.githubusercontent.com/92121311/138095571-d573b85e-531f-45b4-a3d8-c0727a509e8b.PNG" alt="AI">
-<img align="right" src="https://user-images.githubusercontent.com/92121311/138095577-d9e5cd66-5bb5-454b-9df1-c93fab0b981e.PNG" alt="RTD">
+<img align="left" src="https://user-images.githubusercontent.com/92121311/138095571-d573b85e-531f-45b4-a3d8-c0727a509e8b.PNG" alt="AI" width="370" height="305" >
+<img align="right" src="https://user-images.githubusercontent.com/92121311/138095577-d9e5cd66-5bb5-454b-9df1-c93fab0b981e.PNG" alt="RTD" width="370" height="305" >
 <br display="block" clear="both">
 <br>
-<p align="center"><small><i>Wygląd strony głównej</i></small></p>
+<p align="center"><small><i>Interfejs do obsługi wymuszeń.</i></small></p>
 <br>
+<br>
+<hr>
 
 ```C#
 
@@ -34,6 +36,36 @@
   }
 ```
 
+<p align="justify">Metoda wywoływana po naciścnięciu przycisku <b>Połącz</b>. Pobiera string z pola" AMS Net Id" oraz "ADS Port". Następnie, jeśłi w pole tekstowe wstawiony jest odpowiedni ciąg znaków, flaga bAdsOk ustawiana jest na 1, wywoływana jest metoda CheckConnection(). W przypadku gdy flaga bAdsOk zostanie z wartością prawdziwą następuje aktualizacja.</a>
+<hr>
+
+```C#
+
+    private void CheckConnection()
+    {
+        try
+        {
+            byte[] check;
+            if (bAdsOk) TcWebService.Read(szAmsNetId, iPort, iIndexGroup, 5000, 1, out check);
+        }
+        catch (SoapException ex)
+        {
+            bAdsOk = false;
+            MessageBox.Show(ex.Message);
+        }
+
+        catch (Exception ex)
+        {
+            bAdsOk = false;
+            MessageBox.Show(ex.Message);
+        }
+    }
+```
+
+<p align="justify">Metoda sprawdza połączenie ze sterownikiem. Zostaje wysłany jeden pakiet kontrolny i w przypadku gdy komunikacja się powiedzie flaga bAdsOk pozostaje z wartością 1. W przypadku wyłapania wyjątku, flaga ustawiana jest na false a na ekran wyrzucany jest kod błędu.</a>
+<hr>
+
+
 ```C#
 
     private void timer1_Tick(object sender, EventArgs e)
@@ -42,6 +74,9 @@
         picBoxStatusON.Visible = bAdsOk;
     }
 ```
+
+<p align="justify">Prosty sposób na asynchroniczną obsługę wskaźnika "status".</a>
+<hr>
 
 ```C#
 
@@ -63,6 +98,9 @@
         }
     }
 ```
+
+<p align="justify">Metody wywoływane kolejno podczas: zaznaczenia dowolnego checkboxa w panelu DI, zaznaczenia checkboxa w panelu AI oraz wciśnięcia klawisza enter podczas aktywnego pola tekstowego w obszarze AI. Metoda dodatkowo gubi focus oraz poprzez pobranie zawartości z tych samych adresów, weryfikuje poprawność wpisanej wartości.</a>
+<hr>
 
 ```C#
 
@@ -99,29 +137,11 @@
     }
 ```
 
+<p align="justify">Metoda stworzona by w łatwy sposób "wyczyścić" wymuszenia ze wszystkich dostępnych adresów.</a>
+<hr>
 
-```C#
 
-    private void CheckConnection()
-    {
-        try
-        {
-            byte[] check;
-            if (bAdsOk) TcWebService.Read(szAmsNetId, iPort, iIndexGroup, 5000, 1, out check);
-        }
-        catch (SoapException ex)
-        {
-            bAdsOk = false;
-            MessageBox.Show(ex.Message);
-        }
 
-        catch (Exception ex)
-        {
-            bAdsOk = false;
-            MessageBox.Show(ex.Message);
-        }
-    }
-```
 
 ```C#
 
@@ -162,4 +182,7 @@
         }
     }
 ```
+
+
+<p align="justify">Metoda wykorzystywana do wysyłania informacji do WebService.</a>
 
